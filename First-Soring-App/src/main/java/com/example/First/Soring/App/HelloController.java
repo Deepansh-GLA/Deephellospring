@@ -9,20 +9,20 @@ import org.springframework.web.bind.annotation.*;
 public class HelloController {
 
     // Use Case 1: Basic GET Request
-    // http://localhost:8080/hello
+    // API:- http://localhost:8080/hello
     @GetMapping
     public String sayHello() {
         return "Hello from BridgeLabz";
     }
 
     // Use Case 2: GET Request with Query Parameter
-    //http://localhost:8080/hello/query?name=Deepansh
+    //API:- http://localhost:8080/hello/query?name=Deepansh
     @GetMapping("/query")
     public String sayHelloWithQuery(@RequestParam String name) {
         return "Hello " + name + " from BridgeLabz";
     }
     // Use Case 3: GET Request with Path Variable
-    //http://localhost:8080/hello/param/Deepansh
+    //API:- http://localhost:8080/hello/param/Deepansh
     @GetMapping("/param/{name}")
     public String sayHelloWithPath(@PathVariable String name) {
         return "Hello " + name + " from BridgeLabz";
